@@ -1,11 +1,10 @@
-FROM python:3.11-slim
+FROM python:3.10
 
 WORKDIR /app
 
-COPY requirements.txt .
-COPY main.py .
+COPY . /app
+
 RUN pip install --no-cache-dir -r requirements.txt
-RUN touch data.csv
 
 EXPOSE 8000
 
