@@ -7,7 +7,6 @@ app = FastAPI()
 CSV_FILE = "data.csv"
 COLUMNS = ["id", "nome", "cognome", "codice_fiscale"]
 
-# Crea il CSV se non esiste
 if not os.path.exists(CSV_FILE):
     pd.DataFrame(columns=COLUMNS).to_csv(CSV_FILE, index=False)
 
